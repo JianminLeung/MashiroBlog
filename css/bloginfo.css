@@ -1,0 +1,121 @@
+#mainContent { }
+#content {
+    float: right;
+    width: 700px;
+    height:700px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    position: relative;
+    line-height: 50px;
+
+}
+#content h3{
+
+}
+#content p{
+    text-align: left;
+    text-indent: 40px;
+}
+#sidebar {
+    float: left;
+    width: 400px;
+    height: 600px;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+}
+
+
+/* 头像 */
+img.profilephoto
+{
+    width:300px;
+    height:300px;
+    clear:both;
+    display:block;
+    margin:auto;
+}
+
+/* 文字信息 */
+.profilemsg
+{
+    text-align: left;
+    display: inline-block;
+    overflow: hidden;
+    line-height: 50px;
+}
+.gallery{
+  margin-left:30px;
+  font-size:20px;
+}
+.banner{
+  width:100%;
+  margin-top: 5px;
+}
+.banner .line-1{
+  height: 280px;
+  width:100%;
+  margin:0 auto;
+  margin-bottom: 6px;
+}
+.banner .line-2{
+  width:100%;
+  height: 256px;
+  margin:0 auto;
+}
+.banner .line-1 li,.banner .line-2 li{
+  float: left;
+}
+.banner img{
+  cursor:pointer;
+  -webkit-transition:all 0.8s ease-in 0.1s; /*safari*/
+  -moz-transition:all 0.8s ease-in 0.1s; /*火狐*/
+  -ms-transition:all 0.8s ease-in 0.1s;
+  transition:all 0.8s ease-in 0.1s; /*官方标准*/
+}
+.banner .line-1 img{
+  height: 280px;  
+  width:100%;
+}
+.banner .line-2 img{
+  height: 256px;
+  width:100%;
+}
+.line-1 .pic_1{
+  width:29%;
+  margin-right: 0.5%;
+}
+.line-1 .pic_2{
+  width:40%;
+  margin-right: 0.5%;
+}
+.line-1 .pic_3{
+  width:30%;
+}
+
+.line-2 .pic-4{
+  width:36%;
+  margin-right: 0.5%;
+}
+.line-2 .pic-5{
+  width:35%;
+  margin-right: 0.5%;
+}
+.line-2 .pic-6{
+  width:28%;
+}
+.banner li img:hover{
+  -webkit-transform:scale(1.05,1.05);
+  -moz-transform:scale(1.05,1.05);
+  -ms-transform:scale(1.05,1.05);
+  transform:scale(1.05,1.05);
+  opacity: 0.95;
+  border-radius: 5px;
+  -webkit-transition:all 0.8s ease-in 0.1s;
+  -moz-transition:all 0.8s ease-in 0.1s;
+  -ms-transition:all 0.8s ease-in 0.1s;
+  transition:all 0.8s ease-in 0.1s;
+}

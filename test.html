@@ -1,0 +1,280 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/album.css">
+  <link rel="stylesheet" href="test/css" >
+  <!-- <link rel="stylesheet"  href="css/zoom.css" media="all" /> -->
+  <!-- <link rel="stylesheet" href="imgbox/css/imgbox.css"/> -->
+  
+  <title>相册 | 真白博客</title>
+</head>
+
+<body>
+  <!-- 头部导航条 -->
+  <div class="header">
+    <div class="header-wrapper">
+      <div class="g_container">
+          
+        <!-- 登录和注册 -->
+        <div class="register_wrap">
+          <div class="register_wrapper">
+            <ul class="click_register">
+              <li class="login_btn">登录</li>
+              <li class="register_btn">注册</li>
+            </ul>
+
+            <div class="have-login">
+              <ul class="person">
+                <li class="per_name">真白</li>
+                <li class="logout">退出登录</li>
+              </ul>
+            </div>     
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <!-- 登录注册 -->
+  <div class="s_register alert">
+    <!-- 叉掉框的× -->
+    <div class="close">
+       ×
+    </div>
+    <!-- logo -->
+    <h1>Mashiro</h1>
+    <ul>
+      <li class="click_log">登录</li>
+      <li>|</li>
+      <li class='click_rt'>注册</li>
+    </ul>
+    <!-- 登录框，登录界面 -->
+    <div class="user_frame">
+      <div class="u_name">
+        <span class='u_img'></span>
+        <span class='vertical'>|</span>
+        <span class='input_frame'>
+          <input type="text" placeholder="昵称" name='username' class="username"/>
+        </span>
+      </div>
+      <!-- 提示用户名为空或不存在-->
+      <div class="exist_name user01"></div>
+      <div class="u_pwd">
+        <span class='u_pwdimg'></span>
+        <span class='vertical'>|</span>
+        <span class='input_frame'>
+          <input type="password" placeholder="密码" class="password" name="password"/>
+        </span>
+      </div>
+      <!-- 提示密码不能为空或者密码不正确 -->
+      <div class="exist_name pwd01"></div>
+      <div class="r_pwd">
+        <input type="checkbox" class="checkbox" value="1" name="keep"/>
+        <label>记住密码</label>
+      </div>   
+      <div class="login">
+        <button type='button' id="login">登录</button>
+      </div>
+    </div>
+    <!-- 注册框，注册界面 -->
+    <div class="register_frame">
+      <div class="upload-pic">
+        <div class="upload-picw">
+          <div class="upload-tip">
+            上传
+          </div>
+          <!-- 上传头像 -->
+          <div class="upload-img">
+            <a href="">+</a>
+            <input type='file' name="picture" id='photo'/>        
+          </div>
+          <!-- 提示头像不能为空 -->
+          <div class="ImgTip"></div>
+        </div>
+      </div>
+      <div class="username">
+        <input type="text" value="" placeholder="昵称" class='love_name' name="username" id="username" />
+      </div>
+      <!-- 提示昵称不能为空或不能重复 -->
+      <div class="exist_name name01">
+        <span id="mess4"></span>
+      </div>
+      <div class="u_pwd">
+        <input type="password" value="" placeholder="密码" class="password02" name="password" id="password" />
+      </div>
+      <!-- 提示密码不能为空 -->
+      <div class="exist_name pwd02">
+        <span id="mess2"></span>
+      </div>
+      <!-- 确认密码框 -->
+      <div class="u_pwd">
+        <input type="password" value="" placeholder="请确认密码" class="password03" name="repassword" id="repassword" />
+      </div>
+      <!-- 提示确认密码不能为空 -->
+      <div class="exist_name pwd04">
+        <span id="mess22"></span>
+      </div>
+      <div class="confirm">
+        <button type="button" id='submit1'>确认</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 覆盖一整个页面的灰屏 -->
+  <div class="grey"></div>
+
+  <!--页眉-->
+  <div id="header_pic">
+      Mashiro
+  </div>
+
+  <!--导航栏-->
+  <div id="nav">
+    <ul class="menu">
+      <li><a href="index.html" title="主页">主页</a></li>
+      <li><a href="article.html" title="日志">日志</a></li>
+      <li><a id="active" href="album.html" title="相册">相册</a></li>
+      <li><a href="msgboard.html" title="留言板">留言板</a></li>
+      <li><a href="bloginfo.html" title="博主信息">博主信息</a></li>
+    </ul>
+  </div>
+
+  <br class="clearfloat" />
+
+  <!-- 页面信息 -->
+  <div id="mainContent">
+    <div id="sidebar">
+      <ul class="album_catalog">
+        <li name="0"><img src="img/cover1.jpg" width="200px" height="200px"></li>
+        <li><img src="img/cover2.jpg" width="200px" height="200px"></li>
+        <li><img src="img/cover3.jpg" width="200px" height="200px"></li>
+      </ul>
+    </div>
+    <div class="container">
+      <!-- <div class="slider">
+        <div class="spic">
+          <img src="img/2.jpg">
+          <a href="#"></a>
+        </div>
+         <div class="spic">
+          <img src="img/2.jpg">
+          <a href="#"></a>
+        </div>
+         <div class="spic">
+          <img src="img/2.jpg">
+          <a href="#"></a>
+        </div>
+         <div class="spic">
+          <img src="img/2.jpg">
+          <a href="#"></a>
+        </div>
+         <div class="spic">
+          <img src="img/2.jpg">
+          <a href="#"></a>
+        </div>
+      </div> -->
+      <ul class="slider">
+        <li class="spic">
+          <img src="img/2.jpg" width="100px" height="100px">
+          <a href="#"></a>
+        </li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+        <li><a href="img/2.jpg"><img src="img/2.jpg" width="100px" height="100px"></a></li>
+      </ul> 
+      <br class="clearfloat" />
+      <div class="comment">
+        <!-- <div id="note" class="note"><font color="#777">在这里写下你的感受吧~</font></div>   -->
+        <textarea class="myIdea" rows="8" cols="108"></textarea>
+        <div class="comment-tip"></div>
+        <input class="com_submit" type="button" name="评论" value="评论">
+        <br>
+        <br>
+        <div class="com_all">
+          <div class="c_ment">
+            <div class="info">
+              <div class="left_img">
+                <img src="img/kongtai.jpg"  class="com_image" width="50px" height="50px">
+              </div>
+              <div class="right_name">
+                <p class="com_name">空太</p>
+                <p class="com_time">2016-12-12</p>
+              </div>
+            </div>
+            <br class="clearfloat" />
+            <div class='com_content'>
+              这篇文章写得真的是太好了豪嗨心好哈哈哈哈
+            </div>
+          </div> 
+          <div class="c_ment">
+            <div class="info">
+              <div class="left_img">
+                <img src="img/kongtai.jpg"  class="com_image" width="50px" height="50px">
+              </div>
+              <div class="right_name">
+                <p class="com_name">空太</p>
+                <p class="com_time">2016-12-12</p>
+              </div>
+            </div>
+            <br class="clearfloat" />
+            <div class='com_content'>
+              这篇文章写得真的是太好了豪嗨心好哈哈哈哈
+            </div>
+          </div>
+          <div class="c_ment">
+            <div class="info">
+              <div class="left_img">
+                <img src="img/kongtai.jpg"  class="com_image" width="50px" height="50px">
+              </div>
+              <div class="right_name">
+                <p class="com_name">空太</p>
+                <p class="com_time">2016-12-12</p>
+              </div>
+            </div>
+            <br class="clearfloat" />
+            <div class='com_content'>
+              这篇文章写得真的是太好了豪嗨心好哈哈哈哈
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br class="clearfloat" />
+ 
+  <footer>copyright@广东外语外贸大学</footer>
+
+  <script src='js/jquery-2.1.4.min.js'></script>
+  <script src="js/jquery.min.js"></script>
+  <script type="text/javascript" src='slider.js'></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#slider').slider({ speed: 500 });
+    }); 
+  </script>
+  <!-- <script src="js/jquery.imgbox.pack.js"></script> -->
+  <script type="text/javascript" src='js/comment.js'></script> 
+  <script type="text/javascript" src='js/common.js'></script>
+  <script type="text/javascript" src='js/album.js'></script>
+<!--   <script type="text/javascript" src='test.js'></script> -->
+  
+  <!-- <script type="text/javascript" src="imgbox/js/jquery.min.js"></script>
+  <script type="text/javascript" src="imgbox/js/jquery.imgbox.pack.js"></script> -->
+  <!-- <script src="js/zoom.min.js"></script> -->
+</body>
+
+</html>

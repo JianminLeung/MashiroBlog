@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body, ul, li, div, span, a, h1, h2, h3, h4, h5, h6, input, label, img, p {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+ul, li {
+    list-style: none;
+}
+.g_container {
+    width: 1100px;
+    margin:auto;
+}
+body {
+    margin:auto;
+    text-align:center;
+}
+/*头部*/
+.header{
+	height: 80px;
+}
+.header-wrapper{
+	width:100%;
+	position: fixed;
+	height: 50px;
+	z-index:1000;
+	background-color: #a0a0a0;
+}
+
+.register_wrap{
+	float: right;
+}
+.register_wrapper{
+	position: relative;
+	width:260px;
+}
+.click_register {
+	position: absolute;
+	width:160px;
+	right:0;
+	display: block;
+}
+.click_register li{
+	float: left;
+	display: inline-block;
+	width:75px;
+	height: 33px;
+	font-size: 20px;
+	font-family: '造字工房悦圆';
+	color:#000;
+	margin-top: 20px;
+	line-height: 34px;
+	text-align: center;
+	text-indent: 3px;
+	cursor:pointer;
+	font-weight: bold;
+}
+.login_btn{
+	margin-right: 5px;
+}
+.have-login li{
+	float: left;
+	display: inline-block;
+	width:100px;
+	height: 33px;
+	font-size: 20px;
+	font-family: '造字工房悦圆';
+	color:#000;
+	margin-top: 20px;
+	line-height: 34px;
+	text-align: center;
+	text-indent: 3px;
+	cursor:pointer;
+	font-weight: bold;
+}
+.have-login{
+	position: absolute;
+	display: none;
+	top:0;
+	right:0;
+	height: 72px;
+}
+
+
+
+/*登录注册相同的框*/
+.alert{
+	position: fixed;
+	top:110px;
+	left:50%;
+	margin-left: -200px;
+	border-radius: 6px;
+	background: #fff;
+	background-size: 400px 478px;
+	width:400px;
+	height:478px;
+	z-index: 9900;
+}
+/*弹出的登录注册框*/
+.s_register{
+	display: none;
+}
+/*关闭弹窗*/
+.close,.close-invite{
+	width:29px;
+	height: 38px;
+	position: absolute;
+	font-family: 'Adobe 宋体 Std';
+	font-weight: bold;
+	top:0px;
+	right:15px;
+	font-size: 30px;
+	color: #665a5f;
+    cursor:pointer;
+}
+.alert h1{
+	position: absolute;
+	top:45px;
+	left:85px;
+	color:#8e8e8e;
+	font-size: 48px;
+	/* font-family: 'Brush Script Std'; */
+	font-family: "造字工房悦圆";
+	letter-spacing: 3px;
+}
+
+.s_register ul{
+	position: absolute;
+	top:143px;
+	left:85px;
+	overflow: hidden;
+}
+.s_register ul li{
+	float: left;
+	font-size: 24px;
+	height: 30px;
+    font-family: "造字工房悦圆";
+    display: inline-block;
+    margin-right: 15px;
+    color: gray;
+    font-weight: bold;
+    cursor:pointer;
+}
+.s_register ul li:hover{
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+/*登录的账号和密码框*/
+.user_frame{
+	position: absolute;
+	top:200px;
+	left: 85px;
+	width:200px;
+	display: none;
+}
+/*账号不存在的提示框等*/
+.exist_name,.exist_phone,.none_phone,.wrong_num{
+	height: 15px;
+	line-height: 15px;
+	text-indent: 5px;
+	width:100%;
+	font-size: 9px;
+	color:#f73d3d;
+}
+.u_name,.u_phone,.u_pwd,.username{
+	width: 200px;
+	height: 28px;
+	border-radius: 5px;
+	background-color:#8e8e8e;
+}
+.u_name span,.u_pwd span{
+	display: inline-block;
+	width:1px;
+	float: left;
+}
+.u_name .input_frame,.u_name .input_frame input,.u_pwd .input_frame input{
+	width:167px;
+	float: left;
+}
+.vertical{
+	margin-left: 6px;
+	margin-top: 2px;
+	font-size: 16px
+}
+.u_name .u_img{
+	width:23px;
+	height: 28px;
+	background: url(../img/user02.png) no-repeat 1px -3px;
+}
+.u_pwd .u_pwdimg{
+	width:23px;
+	height: 28px;
+	background:url(../img/key.png) no-repeat -5px -3px;
+}
+.user_frame .u_name,.user_frame .u_pwd{
+	width:200px;
+}
+.user_frame input,.register_frame input,.reset_frame input{
+	border:none;
+	background: transparent;
+	width:192px;
+	height:27px;
+	font-size: 13px;
+	line-height: 28px;
+	color:#eee;
+	letter-spacing: 1px;
+	text-indent: 8px; 
+	outline: none;
+	z-index: 10;
+}
+.user_frame input::-webkit-input-placeholder{
+	color:#555;
+	font-size: 12px;
+}
+.user_frame input::-ms-input-placeholder{
+	color:#555;
+	font-size: 12px;	
+}
+.user_frame input::-moz-placeholder{
+	color:#555;
+	font-size: 12px;	
+}
+.user_frame input::placeholder{
+	color:#555;
+	font-size: 12px;
+}
+.register_frame input::-webkit-input-placeholder,.reset_frame input::-webkit-input-placeholder{
+	color:#fbf7f7;
+	font-size: 12px;
+}
+.register_frame input::-ms-input-placeholder,.reset_frame input::-ms-input-placeholder{
+    color:#fbf7f7;
+	font-size: 12px;
+}
+.register_frame input::-moz-placeholder,.reset_frame input::-moz-placeholder{
+    color:#fbf7f7;
+	font-size: 12px;
+}
+.register_frame input::placeholder,.reset_frame input::placeholder{
+	 color:#fbf7f7;
+	font-size: 12px;   
+}
+
+/*记住密码*/
+.r_pwd{
+	float: left;
+}
+.r_pwd input,.anonymity input{
+	float: left;
+	outline: none;
+	display: inline-block;
+	margin-top: 1px;
+	margin-right: 3px;
+	width:18px;
+	height: 18px;
+}
+.r_pwd label{
+	float: left;
+	display: inline-block;
+	color:  #656565;
+	font-size: 14px;
+}
+/*忘记密码*/
+.forget_pwd{
+	float: right;
+}
+.forget_pwd a{
+	font-size: 14px;
+	color: #656565;
+}
+.forget_pwd a:hover,.login button:hover,.confirm button:hover{
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+.login,.confirm{
+	margin-top: 51px;
+	width:200px;
+	height: 28px;
+	clear: both;
+}
+.confirm{
+	margin-top: 10px;
+}
+.login button,.confirm button{
+	width:200px;
+	height: 28px;
+/* 	background:url(../img/login_04.png) no-repeat -10px -7px; */
+	background-size: 270px 43px;
+	border-radius: 5px;
+	color: #8e8e8e;
+	font-size: 14px;
+	font-weight: bold;
+	border:none;
+	outline: none;
+	text-align: center;
+	cursor:pointer;
+	letter-spacing: 10px;
+}
+
+
+.register_frame{
+	display: none;
+	position: absolute;
+	top:195px;
+	left: 85px;
+	width:200px;
+}
+.identify_num{
+  overflow: hidden;
+}
+.identify_num span{
+	float: left;
+	display: inline-block;
+}
+.identify_num input{
+	width:100px;
+	background-color:#8e8e8e;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+.identify_num img{
+	border-radius: 5px;
+	float: left;
+	width:90px;
+	height: 28px;
+}
+.identify_num button{
+	width:90px;
+	height: 28px;
+	background: #8e8e8e;
+	border-radius: 5px;
+	color:#fbf7f7;
+	border:none;
+	outline: none;
+	cursor:pointer;
+}
+/*忘记密码即重置密码框*/
+.reset_pwd{
+    display: none;
+}
+.reset_pwd .changepw{
+	color:#665f62;
+	font-size: 18px;
+	font-family: "造字工房悦圆";
+	position: absolute;
+	top:143px;
+	left:85px;
+}
+.reset_frame{
+	position: absolute;
+	top:185px;
+	width:200px;
+	left:85px;
+}
+.grey{
+	position: fixed;
+	top:0;
+	width:100%;
+	height: 100%;
+	z-index: 1000;
+	background: rgba(0,0,0,0.75);
+	display: none;
+}
+/*.upload-pic{
+	float: left;
+}*/
+.upload-picw{
+	position: relative;
+}
+.upload-tip{
+	position: relative;
+	top:0;
+	left:0;
+	font-size: 14px;
+	color:#000;
+	width:280px;
+	display:none;
+}
+.upload-tip{
+	height: 20px;
+	width:40px;
+	cursor:pointer;
+	text-align: center;
+	border-radius: 3px;
+	border:1px solid #000;
+}
+.upload-img{
+	/*text-align: center;*/
+	margin-bottom: 20px;
+	width:80px;
+	height: 80px;
+	border:1px solid #fff;
+	position: relative;
+	cursor:pointer;
+	display: block;
+}
+.upload-img a{
+	display: inline-block;
+	position: absolute;
+	top:0;
+	width:80px;
+	height: 80px;
+	font-size: 40px;
+	line-height: 80px;
+	text-align: center;
+	color:#8e8e8e;
+	border:1px solid #8e8e8e;
+}
+.upload-img input{
+	position: absolute;
+	border:1px solid #000;
+	top:0px;
+	width:80px;
+	height: 80px;
+	opacity: 0;
+	cursor:pointer;
+}
+/*上传图片的定位及大小*/
+.upload-image{
+	width:80px;
+	height: 80px;
+	position: absolute;
+	top:0;
+	z-index: 999;
+}
+.ImgTip{
+	margin-top: 5px;
+	color:#ED8989;
+	font-size: 13px;
+}
+.clearfloat {
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+/*页眉*/
+#header_pic
+{
+    margin: 10em auto;
+}
+/*caidan*/
+#nav .menu
+{
+    display: block;
+    list-style-type:none;
+}
+/*caidanneirong*/
+#nav .menu li
+{
+    display: inline-block;
+    line-height: 2em;
+}
+#nav .menu li a:visited, #nav .menu li a:link
+{
+    color: black;
+    text-decoration:none;
+    display: block;
+    text-align: center;
+    width:6em;
+    border-bottom: transparent solid;
+}
+/*chufacaidan*/
+#nav .menu li a:active, #nav .menu li a:hover
+{
+    color: black;
+    text-decoration:none;
+    display: block;
+    text-align: center;
+    width:6em;
+    border-bottom: solid red;
+}
+
+
+footer
+{
+    background-color: gray;
+    bottom: 0;
+    width: 100%
+    line-height: 1em;
+    /*position:fixed;
+    bottom:0px;
+    left:0px;*/
+}
+/*滚动条*/
+::-webkit-scrollbar
+{
+    width: 1px;
+
+}
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: darkgray;
+}
+::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
+

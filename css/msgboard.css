@@ -1,0 +1,100 @@
+#mainContent { }
+#content {
+    float: right;
+    width: 800px;
+    height:600px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    position: relative;
+    line-height: 30px;
+    background-color: none;
+    overflow: auto;
+}
+
+#content h3{
+
+}
+#content p{
+    text-align: left;
+    text-indent: 40px;
+}
+.comment{
+    width: 750px;
+    position: relative;
+}
+.textarea{
+    padding: 3px 5px;
+    position:absolute;
+    background:none;
+    z-index:9
+}
+.note{  
+    margin-left:10px;
+    position:absolute;
+    line-height:20px;
+    padding:3px 5px;  
+}  
+.com_submit{
+    margin-top: 10px;
+    margin-right: 5px;
+    float: right;
+    width: 50px;
+    height: 30px;
+    font-size: 18px;
+}
+.info{
+    height: 50px;
+    width: 800px;
+    text-align: left;
+}
+.left_img{
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+.right_name{
+    float: right;
+  width: 750px;
+  height: 25px;
+}
+.com_content{
+  height: 100px;
+  text-align: left;
+}
+.com_time{
+    height: 25px;
+    width: 750px;
+}
+.comment-tip{
+    color:red;
+    height: 20px;
+    width:100%;
+    margin-bottom: 5px;
+}
+#sidebar {
+    float: left;
+    width: 300px;
+    height: 600px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+#sidebar table{
+  float: none;
+  align-self: center;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#sidebar tr{
+  width: 50px;
+  height: 30px;
+}
+
+
